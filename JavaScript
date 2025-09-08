@@ -1,11 +1,14 @@
-// Simple scroll reveal animation
-document.addEventListener("scroll", function () {
-  let elements = document.querySelectorAll(".fade-in-up");
-  elements.forEach(el => {
-    let position = el.getBoundingClientRect().top;
-    let screenHeight = window.innerHeight;
-    if (position < screenHeight - 100) {
-      el.classList.add("visible");
-    }
-  });
-});
+// IntersectionObserver to reveal sections on scroll
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add("show");
+    });
+  },
+  { threshold: 0.15 }
+);
+
+document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+// Optional: smooth scroll for in-page links (if you add a nav later)
+document.documentElement.style.scrollBehavior = "smooth";
