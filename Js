@@ -1,0 +1,79 @@
+body{
+font-family: Arial, sans-serif;
+background: linear-gradient(to right,#dbeafe,#e0f7fa);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+
+h2{
+color: #2c3e50;
+text-align: center;
+}
+
+p{
+text-align: center;
+font-size: 14px;
+}
+
+form{
+background-color: white;
+padding: 30px;
+width: 380px;
+border-radius: 12px;
+box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+label{
+font-weight: bold;
+font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea{
+width: 100%;
+padding: 8px;
+margin-top: 5px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 6px;
+box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+margin-right: 5px;
+}
+
+input[type="submit"],
+input[type="reset"]{
+padding: 8px 15px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 14px;
+}
+
+input[type="submit"]{
+background-color: #3498db;
+color: white;
+}
+
+input[type="submit"]:hover{
+background-color: #2980b9;
+}
+
+input[type="reset"]{
+background-color: #e74c3c;
+color: white;
+margin-left: 10px;
+}
+
+input[type="reset"]:hover{
+background-color: #c0392b;
+}
