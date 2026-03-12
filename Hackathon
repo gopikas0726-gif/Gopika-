@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Activity Tracker</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:linear-gradient(to right,#89f7fe,#66a6ff);
+margin:0;
+text-align:center;
+}
+
+header{
+background:#2c3e50;
+color:white;
+padding:15px;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+width:80%;
+background:white;
+}
+
+th,td{
+padding:10px;
+border:1px solid #ccc;
+}
+
+th{
+background:#3498db;
+color:white;
+}
+
+/* Completed box */
+.completed{
+background:green;
+color:white;
+padding:6px 12px;
+border-radius:5px;
+font-weight:bold;
+}
+
+/* Pending box */
+.pending{
+background:pink;
+color:black;
+padding:6px 12px;
+border-radius:5px;
+font-weight:bold;
+}
+
+#progress{
+margin-top:20px;
+font-size:18px;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Student Activity Tracker</h1>
+</header>
+
+<h2>Welcome to My Dashboard</h2>
+
+<h3>Activity List</h3>
+
+<table id="activityTable">
+
+<tr>
+<th>Activity</th>
+<th>Description</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>HTML Basics</td>
+<td>Learn HTML page structure</td>
+<td><span class="completed">Completed</span></td>
+</tr>
+
+<tr>
+<td>CSS Styling</td>
+<td>Apply colors and layout</td>
+<td><span class="pending">Pending</span></td>
+</tr>
+
+<tr>
+<td>Navigation Bar</td>
+<td>Create menu using HTML & CSS</td>
+<td><span class="pending">Pending</span></td>
+</tr>
+
+<tr>
+<td>JavaScript Basics</td>
+<td>Learn JS functions</td>
+<td><span class="pending">Pending</span></td>
+</tr>
+
+<tr>
+<td>Form Validation</td>
+<td>Validate form using JS</td>
+<td><span class="pending">Pending</span></td>
+</tr>
+
+<tr>
+<td>Responsive Design</td>
+<td>Make website mobile friendly</td>
+<td><span class="pending">Pending</span></td>
+</tr>
+
+</table>
+
+<div id="progress"></div>
+
+<script>
+
+let total = document.querySelectorAll("#activityTable tr").length - 1;
+let completed = document.querySelectorAll(".completed").length;
+
+let percentage = Math.round((completed / total) * 100);
+
+document.getElementById("progress").innerHTML =
+completed + " out of " + total + " activities completed <br>" +
+percentage + "% Completed";
+
+</script>
+
+</body>
+</html>
